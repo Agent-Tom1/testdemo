@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile shop landing page</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .product-card h2 {
+            margin-top: 0;
+        }
+        
+        .product-card p {
+            margin-bottom: 20px;
+        }
+        
+        .product-card button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .product-card button:hover {
+            background-color: #444;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .product-card {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .product-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>mobile shop</h1>
+    </div>
+    <div class="main-content">
+        <div class="product-card">
+            <img src="image1.jpg" alt="product 1">
+            <h2>iphone 13</h2>
+            <p>6.1-inch display, 128gb storage, 12mp camera</p>
+            <button>buy now</button>
+        </div>
+        <div class="product-card">
+            <img src="image2.jpg" alt="product 2">
+            <h2>samsung galaxy s22</h2>
+            <p>6.2-inch display, 128gb storage, 50mp camera</p>
+            <button>buy now</button>
+        </div>
+        <div class="product-card">
+            <img src="image3.jpg" alt="product 3">
+            <h2>google pixel 6</h2>
+            <p>6.0-inch display, 128gb storage, 50mp camera</p>
+            <button>buy now</button>
+        </div>
+    </div>
+    <script>
+        // add event listener to buttons
+        const buttons = document.queryselectorall('.product-card button');
+        buttons.foreach(button => {
+            button.addeventlistener('click', () => {
+                alert('thank you for purchasing!');
+            });
+        });
+    </script>
+</body>
+</html>
